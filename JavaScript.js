@@ -1,6 +1,10 @@
+//El proyecto consiste en crear un juego,el cual es piedra,pepel o tijeras,el cual se definira en 5 rondas,
+//para que el usuario juegue contra la computadora (Esto todo por consola).
+
+
 //Creo variables del score del usuario y de la computadora.
-let scoreHuman = 0;
-let scoreComputer = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 //Creo la funcion para que salga aleatoriamente piedra,papel o tijeras.
 function getComputerChoice(){
@@ -25,11 +29,11 @@ function playRound(humanChoice,computerChoice){
     
     if(humanChoice === "piedra"){
         if(computerChoice === "tijeras"){
-            scoreHuman ++;
+            humanScore ++;
 
             return `Ganaste!! ${humanChoice} beats ${computerChoice}`;
         }else if(computerChoice === "papel"){
-            scoreComputer ++;
+            computerScore ++;
             return `Perdiste.. ${computerChoice} beats ${humanChoice}`;
         }else{
             return `Empate!`;
@@ -37,10 +41,10 @@ function playRound(humanChoice,computerChoice){
     }else if(humanChoice === "papel"){
         if(computerChoice === "piedra"){
 
-            scoreHuman ++;
+            humanScore ++;
             return `Ganaste! ${humanChoice} beats ${computerChoice}`;
         }else if(computerChoice === "tijeras"){
-            scoreComputer ++;
+            computerScore ++;
             return `Perdiste ${computerChoice} beats ${humanChoice}`;
         }else{
             return `Empate`;
@@ -48,11 +52,11 @@ function playRound(humanChoice,computerChoice){
     }else if(humanChoice === "tijeras"){
         if(computerChoice === "papel"){
 
-            scoreHuman ++;
+            humanScore ++;
             console.log(`Ganaste!! ${humanChoice} beats ${computerChoice}`)
         }else if(computerChoice === "piedra"){
 
-            scoreComputer ++;
+            computerScore ++;
             return `Perdiste! ${computerChoice} beats ${humanChoice}`;
         }else{
             return `Empate`
@@ -65,7 +69,7 @@ function playGame(){
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
         console.log(playRound(humanSelection,computerSelection));
-        console.log(`Human Score: ${scoreHuman}\n Computer Score: ${scoreComputer}`);        
+        console.log(`Human Score: ${humanScore}\n Computer Score: ${computerScore}`);        
     }
 } 
 playGame(); 
