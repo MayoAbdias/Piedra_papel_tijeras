@@ -31,35 +31,35 @@ function playRound(humanChoice,computerChoice){
         if(computerChoice === "tijeras"){
             humanScore ++;
 
-            return `Ganaste!! ${humanChoice} beats ${computerChoice}`;
+            return `Ganaste!! ${humanChoice} le gana a ${computerChoice}`;
         }else if(computerChoice === "papel"){
             computerScore ++;
-            return `Perdiste.. ${computerChoice} beats ${humanChoice}`;
+            return `Perdiste.. ${computerChoice} le gana a ${humanChoice}`;
         }else{
-            return `Empate!`;
+            return `Es un empate!`;
         }      
     }else if(humanChoice === "papel"){
         if(computerChoice === "piedra"){
 
             humanScore ++;
-            return `Ganaste! ${humanChoice} beats ${computerChoice}`;
+            return `Ganaste! ${humanChoice} le gana a ${computerChoice}`;
         }else if(computerChoice === "tijeras"){
             computerScore ++;
-            return `Perdiste ${computerChoice} beats ${humanChoice}`;
+            return `Perdiste ${computerChoice} le gana a ${humanChoice}`;
         }else{
-            return `Empate`;
+            return `Es un empate!`;
         }
     }else if(humanChoice === "tijeras"){
         if(computerChoice === "papel"){
 
             humanScore ++;
-            console.log(`Ganaste!! ${humanChoice} beats ${computerChoice}`)
+            console.log(`Ganaste!! ${humanChoice} le gana a ${computerChoice}`)
         }else if(computerChoice === "piedra"){
 
             computerScore ++;
-            return `Perdiste! ${computerChoice} beats ${humanChoice}`;
+            return `Perdiste! ${computerChoice} le gana a ${humanChoice}`;
         }else{
-            return `Empate`
+            return `Es un empate!`
         }   
     }
 }
